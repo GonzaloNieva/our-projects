@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*   Nav   */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    position: sticky;
+}
+nav .btn{
+    height: 50px;
+    width: 25%;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+/*   Seccion 1   */
+
+
+/*   Seccion 2   */
+
+
+/*   Seccion 3  */
+
+
+/*   Footer   */
