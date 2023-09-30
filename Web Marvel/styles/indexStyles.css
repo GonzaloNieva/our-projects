@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.heladeria{
+    display: flex;
+    justify-content: center;
+
+    width: auto;
+    height: 10%;
+    padding: 10px;
+    border: 1px solid #00A4BD;
+    border-radius: 3px;
+}
+.nombreHeladeria{
+    font-size: 400%;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.dropdown-content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 96%;
+
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    height: 100px;
+}
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+    height: 100px;
+}

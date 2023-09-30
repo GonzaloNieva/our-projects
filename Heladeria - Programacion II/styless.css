@@ -1,29 +1,101 @@
+/*
+Naranja foerte: #BD3F16     Naranjita Dorado: #E1702E     Cremitaaa: #F5E6DA
+
+Título: Roboto     Subtitulo: PlayFair Display      Text Principal: Lato
+
+Heladería: Toñito's
+*/
 *{
     margin: 0;
     padding: 0;
 }
+body{
+    margin: 50px 0 0 0 ;
+    background-color: #F5E6DA;
+}
+.sec{
+    height: 1000px;
+}
+
+
 /*   Nav   */
-nav{
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0 10px 0;
-    position: sticky;
 }
-nav .btn{
-    height: 50px;
-    width: 25%;
-    border: 2px solid grey;
-    cursor: pointer;
+.desplegable {
+    display: inline-block;
+    position: fixed;
+    margin: 100px 0 0 0;
+}
+.heladeria{
+    display: flex;
+    justify-content: center;
+
+    
+    width: auto;
+    height: 10%;
+    padding: 10px 30px 10px 30px;
+    border: 3px solid #BD3F16;
+    border-radius: 3px;
+    background-color: #E1702E;
+}
+.nombreHeladeria{
+    font-size: 400%;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+/*Customizacion y ocultismo delmismo*/
+.contenido-desplegable {
+    margin: 0px 0 0 0;
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: hidden; /*esconde las barras de desplazamiento lateral*/
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+/*Despliegue de opciones*/
+.desplegable:hover .contenido-desplegable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-/*   Seccion 1   */
+/*Customizando los botones del desplegable*/
+
+.contenido-desplegable a { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 99%;
+
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    height: 100px;
+}
+.contenido-desplegable a:hover {
+    color: #000000;
+    font-weight: 700;
+    background-color: #E1702E;
+    height: 100px;
+}
+
+/*   Fin Nav   */
 
 
-/*   Seccion 2   */
+/*   Historia   */
 
 
-/*   Seccion 3  */
+/*   Sabores   */
+
+
+/*   Tienda  */
 
 
 /*   Footer   */

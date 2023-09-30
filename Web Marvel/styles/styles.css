@@ -2,14 +2,58 @@
     margin: 0;
     padding: 0;
 }
-
 .container{
     display: flex;
-    flex-wrap: wrap;
-
+    justify-content: center;
+    align-items: center;
 }
+.desplegable {
+    display: inline-block;
+    position: relative;
+}
+.heladeria{
+    display: flex;
+    justify-content: center;
 
-.nav{
+    width: auto;
+    height: 10%;
+    padding: 10px;
+    border: 1px solid #00A4BD;
+    border-radius: 3px;
+}
+.nombreHeladeria{
+    font-size: 400%;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.contenido-desplegable {
+    display: none;
+    position: absolute;
     width: 100%;
-    position: sticky;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.desplegable:hover .contenido-desplegable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contenido-desplegable a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 96%;
+
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    height: 100px;
+}
+.contenido-desplegable a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+    height: 100px;
 }
