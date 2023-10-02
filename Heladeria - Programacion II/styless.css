@@ -181,8 +181,162 @@ Heladería: Toñito's
 
 /*   Sabores   */
 
+/* Pausar el carrusel al pasar el mouse sobre el slider */
+.slider:hover .slide-track {
+    animation-play-state: paused;
+}
+
+/* Reanudar el carrusel al quitar el mouse */
+.slider:not(:hover) .slide-track {
+    animation-play-state: running;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+/* Animación (ajusta la duración para hacerla más lenta) */
+@keyframes scroll {
+    100% { transform: translateX(0); }
+    
+    90% { transform: translateX(calc(-10% * 8)); } /* Ajusta el número según la cantidad de diapositivas */
+}
+/* Carrusel (ajusta el espaciado entre las diapositivas) */
+.slide-track {
+    animation: scroll 50s linear infinite; /* Cambia la dirección de la animación */
+    display: flex;
+    transform: translateX(0); /* Elimina el espacio entre las diapositivas */
+    margin: 0; /* Elimina cualquier margen */
+}
+.slide {
+    height: 100px;
+    width: calc(150% / 8); /* Ancho de las diapositivas */
+    background-color: transparent;
+    padding: 0;
+    margin: 0; /* Elimina cualquier margen */
+    transform: scale(1); /* Tamaño fijo */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de acercamiento */
+}
+
+
+/* Efecto de acercamiento al pasar el mouse */
+.slide:hover {
+    transform: scale(1.2); /* Hacerlo más grande al pasar el mouse */
+}
+
+
+/* Mostrar la descripción al pasar el mouse sobre la tarjeta */
+
+.card:hover .card-image {
+    opacity: 0.7; /* Hace que la imagen sea un poco más tenue al mostrar la descripción */
+}
+.card-image img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen al 100% */
+    height: auto;
+    display: block;
+}
+.card {
+    position: relative;
+}
+
+.card-description {
+    display: none;
+    position: absolute;
+    background-color:rgba(252, 143, 103, 0.651);
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%; /* Hace que la descripción sea circular */
+    transform-origin: top center;
+    transform: scaleY(0); /* Inicialmente oculta */
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-description {
+    display: block;
+    transform: scaleY(1); /* Muestra la descripción con efecto de despliegue hacia abajo */
+}
+
 
 /*   Tienda  */
 
 
 /*   Footer   */
+
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color:#E1702E;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #b38a73;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
