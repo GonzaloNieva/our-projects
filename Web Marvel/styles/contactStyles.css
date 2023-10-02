@@ -1,0 +1,51 @@
+#historia.sec {
+    position: relative;
+    height: 500px;
+}
+.background{
+    background-image: url(images/icecream.png);
+    height: 100%;
+    background-position: center;
+    background-size: fill;
+    opacity: 0.5;
+    background-color: #fff7f0;
+    z-index: -1;
+    position: relative;
+    border: 2px #E1702E solid;
+    border-radius: 10px;
+    
+}
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px 30px 20px 30px;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 1;
+}
+.contenedor .titulo{
+    margin: 0px 0 25px 0;
+    font-size: 200%;
+}
+.contenedor .subtitulo{
+    margin: 30px;    
+    font-size: 130%;
+}
+.contenedor .cuerpo{
+    padding: 15px;
+    background-color: #E1702E;
+    border-radius: 10px;
+    opacity: 1;
+    font-weight: 600;
+    color: #000000;
+}
+.contenedor.cuerpo.p1{
+    margin: 50px 0 0 0;
+}
+.contenedor.cuerpo.p2{
+    margin: 450px 0 0 0;
+}

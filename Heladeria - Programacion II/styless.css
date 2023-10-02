@@ -128,7 +128,7 @@ Heladería: Toñito's
 
 #historia.sec {
     position: relative;
-    height: 500px;
+    height: 550px;
 }
 .background{
     background-image: url(images/icecream.png);
@@ -141,7 +141,6 @@ Heladería: Toñito's
     position: relative;
     border: 2px #E1702E solid;
     border-radius: 10px;
-    
 }
 .contenedor{
     display: flex;
