@@ -286,8 +286,8 @@ ul{
     padding: 70px 0;
 }
 .footer-col{
-   width: 25%;
-   padding: 0 15px;
+    width: 25%;
+    padding: 0 15px;
 }
 .footer-col h4{
 	font-size: 18px;
@@ -302,7 +302,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #b38a73;
+	background-color: #F5E6DA;
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
@@ -316,7 +316,7 @@ ul{
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color: #F5E6DA;
 	display: block;
 	transition: all 0.3s ease;
 }
