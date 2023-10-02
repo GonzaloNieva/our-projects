@@ -95,6 +95,7 @@ body{
 /*   Sabores   */
 
 
+
 /*   Tienda  */
 
 
@@ -116,7 +117,7 @@ body{
 .sidebar h3{
     font-size: 25px;
     font-family: 'Roboto';
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 .sidebar ul {
     list-style: none;
@@ -124,7 +125,9 @@ body{
 }
 
 .sidebar ul li {
+    font-family:  'Lato', sans-serif;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .sidebar ul li a {
@@ -145,7 +148,7 @@ body{
     height: auto;
     width: 400px;
 }
-.product-details img:active{ /* se activa unicamente al mantener presionado el click derecho */
+.product-details img:active{ /* se activa unicamente al mantener presionado el click izquierdo */
     width:450px;
     cursor: zoom-in; /* cursor en forma de lupa (+) */
     transition: 1.5s;
@@ -167,6 +170,14 @@ body{
     font-weight: 700;
     color: #333;
 }
+
+
+/*Edicion Carrousel tienda*/
+
+
+
+
+
 
 
 /*   Footer  */
