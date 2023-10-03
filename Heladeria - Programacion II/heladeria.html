@@ -9,11 +9,32 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" href="images/A-Red-Panda-car-1-PhotoRoom.png-PhotoRoom.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <script src="js/form.js"></script>
 
     
 
 </head>
 <body>
+    <!--Sección Formulario -->
+    <div class="modal" id="myModal"> <!--Modal hace referencia a una "ventana emergente"-->
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span> <!-- &times para mostrar la "x"-->
+            <div class="formulario">
+                <h6>¡Hola!</h6>
+            <p>¿Quéres recibir las últimas novedades?</p>
+                <form action="">            
+                    <div class="input-box">
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <button type="submit" class="btn">Suscribirme</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
 
     <!--  Nav - Se encarga: [Facundo]  -->
 
@@ -214,6 +235,8 @@
 
     <section class="sec_tienda" id="tienda">
         <div class="espacio"></div>
+        
+        </div>
         <div class="container">
             <div class="sidebar">
                 <div class="sidebar_h3">
