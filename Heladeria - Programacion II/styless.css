@@ -72,7 +72,7 @@ nav img{
     padding: 10px 30px 10px 30px;
     border: 3px solid #BD3F16;
     border-radius: 7px;
-    background-color: #E1702E;
+    background-color:rgba(252, 143, 103, 0.877);
 }
 .nombreHeladeria{
     font-size: 400%;
@@ -132,11 +132,11 @@ nav img{
     height: 550px;
 }
 .background{
-    background-image: url(images/icecream.png);
+    background-image: url(images/A\ bunch\ of\ ice-\ 1.png);
     height: 600px;
     background-position: center;
-    background-size: fill;
-    opacity: 0.5;
+    background-size: cover;
+    opacity: 0.7;
     background-color: #fff7f0;
     z-index: -1;
     position: relative;
@@ -275,7 +275,7 @@ nav img{
 
 /*   Tienda  */
 .espacio{
-    height: 300px;
+    height: 500px;
 }
 .container_items{
     display: grid;
@@ -329,7 +329,7 @@ nav img{
 .product-details img:active{ /* se activa unicamente al mantener presionado el click izquierdo */
     width:450px;
     cursor: zoom-in; /* cursor en forma de lupa (+) */
-    transition: 1.5s;
+    transition: 1.5s ease;
 }
 
 .product-details h2 {
