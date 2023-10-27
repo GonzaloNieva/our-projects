@@ -264,7 +264,7 @@ nav img{
 .contenedor .cuerpo{
     padding: 15px;
     border-radius: 10px;
-    opacity: 0.3;
+    opacity: 1;
     font-weight: 600;
     color: #000000;
 }
@@ -279,6 +279,9 @@ nav img{
 
 
 /*   Fin Historia   */
+
+/* Chekar:   swipperJs */
+
 
 /*   Sabores   */
 
