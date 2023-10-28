@@ -1,0 +1,38 @@
+.contenedorNav{
+    background-image: linear-gradient(to bottom, #232526, #414345);
+    
+    width: 100%;
+    height: 100px;
+    position: fixed;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 100;
+}
+
+.secciones{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secciones ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.secciones ul li{
+    color: aliceblue;
+    margin: 15px 150px 0px;
+}
+
+
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
