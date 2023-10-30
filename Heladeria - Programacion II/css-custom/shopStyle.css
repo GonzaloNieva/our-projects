@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #C6C3C3;
+}
+
+.espacio{
+    height: 500px;
+}
+
+
+  
+  
+.contenedor_items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ubica a los elementos en 4 columnas */
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+.sidebar {
+    
+    width: 200px;    
+    padding: 20px;
+    margin-left: 50px;
+    
+}
+
+.sidebar h3{
+    font-size: 25px;
+    font-family: 'Roboto';
+    margin-bottom: 40px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    font-family:  'Lato', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.sidebar ul li a:hover{
+    text-decoration: underline; /* Subraya el texto al aproximar el cursor*/
+}
+
+.product-details {    
+    padding: 20px;
+    text-align: center;
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+}
+.product-details img:active{ /* se activa unicamente al mantener presionado el click izquierdo */
+    width:450px;
+    cursor: zoom-in; /* cursor en forma de lupa (+) */
+    transition: 1.5s ease;
+}
+
+.product-details h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.product-details h2:hover{
+    cursor: pointer; 
+    text-decoration: underline;
+}
+
+.product-details p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
