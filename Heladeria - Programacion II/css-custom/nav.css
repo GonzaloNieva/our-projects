@@ -30,6 +30,31 @@
 }
 
 
+.secciones ul li a {
+    position: relative;
+    color: aliceblue; 
+    text-decoration: none; 
+
+}
+
+/* Efecto de subrayado progresivo de izquierda a derecha en hover */
+.secciones ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Grosor del subrayado, puedes ajustarlo según tus preferencias */
+    bottom: -2px;
+    left: 0;
+    background-color: aliceblue; /* Color del subrayado, puedes cambiarlo según tus preferencias */
+    transition: width 0.3s ease; /* Transición suave para el subrayado */
+}
+
+.secciones ul li a:hover::before {
+    width: 100%; /* El subrayado se expandirá completamente en hover */
+}
+
+
+
 
 .botones{
     display: flex;
