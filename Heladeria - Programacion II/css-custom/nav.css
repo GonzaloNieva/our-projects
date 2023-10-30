@@ -27,6 +27,8 @@
 .secciones ul li{
     color: aliceblue;
     margin: 15px 150px 0px;
+    font-family:  'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 
@@ -53,11 +55,11 @@
     width: 100%; /* El subrayado se expandirá completamente en hover */
 }
 
-
-
-
 .botones{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.carrito{
+    margin-left: 60px;   
 }
