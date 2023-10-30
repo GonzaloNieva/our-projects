@@ -6,7 +6,7 @@ body{
 }
 
 .espacio{
-    height: 500px;
+    height: 100px;
 }
 
 
@@ -83,3 +83,29 @@ body{
     color: #333;
 }
 
+
+
+/*estilos para Swiper*/
+
+swiper-container {
+    width: 1200px;
+    height: 800px;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 800px;
+    height: 500px;
+    object-fit: auto;
+  }
+
+ 

@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="/css-custom/nav.css">
     <link rel="stylesheet" href="/css-custom/footerStyle.css">
 
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <link rel="icon" href="images/A-Red-Panda-car-1-PhotoRoom.png-PhotoRoom.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&family=Roboto:wght@300;700&family=Secular+One&display=swap" rel="stylesheet">
 
-<!-- Bootstrp -->
+<!-- Bootstrap -->
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+<!-- Swiper -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 <body>
@@ -56,7 +64,15 @@
     </header>  
     <section class="sec_tienda">
         <div class="espacio"></div>
-        
+    <div class="comovosquieras">
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+        centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        <swiper-slide><img src="/images/avellana.png" alt=""></swiper-slide>
+        <swiper-slide><img src="/images/chocolate.png" alt=""></swiper-slide>
+        <swiper-slide><img src="/images/dulce de leche.png" alt=""></swiper-slide>
+    </swiper-container>
+    </div>   
+    
         
         <div class="contenedor" id="tienda">
             <div class="sidebar">
@@ -64,59 +80,76 @@
                 <h3>Categorías</h3>           
             </div>
                 <ul>
-                    <li><a href="#">Delantales</a></li>
-                    <li><a href="#">Gift Cards</a></li>
-                    <li><a href="#">Bowls</a></li>
+                    <li><a href="#" id="delantales">Delantales</a></li>
+                    <li><a href="#" id="cards">Gift Cards</a></li>
+                    <li><a href="#" id="bowls">Bowls</a></li>
                    
                 </ul>
             </div>
             <div class="contenedor_items">
-                <div class="product-details">
-                    <img src="/images/delantalHappy.png" alt="Producto 1">
-                    <h2>Delantal - Happy Cream</h2>
-                    <p>Precio: $7.300,00</p>
+                <div class="item_delantales">
+                    <div class="product-details">
+                        <img src="/images/delantalHappy.png" alt="Producto 1">
+                        <h2>Delantal - Happy Cream</h2>
+                        <p>Precio: $7.300,00</p>
+                    </div>
                 </div>
+                
+                <div class="item_cards">
+                    <div class="product-details">
+                        <img src="/images/kilodehelado.png" alt="Producto 1">
+                        <h2>Ice Card - 1kg de helado</h2>
+                        <p>Precio: $5.900</p>
+                    </div>
+                </div>
+                
 
-                <div class="product-details">
-                    <img src="/images/kilodehelado.png" alt="Producto 1">
-                    <h2>Ice Card - 1kg de helado</h2>
-                    <p>Precio: $5.900</p>
+                <div class="item_delantales">
+                    <div class="product-details">
+                        <img src="/images/delantalFanatic.png" alt="Producto 1">
+                        <h2>Delantal de Cocina - Fanatic</h2>
+                        <p>Precio: $7.400,01</p>
+                    </div>
                 </div>
-
-                <div class="product-details">
-                    <img src="/images/delantalFanatic.png" alt="Producto 1">
-                    <h2>Delantal de Cocina - Fanatic</h2>
-                    <p>Precio: $7.400,01</p>
+                
+                <div class="item_cards">
+                    <div class="product-details">
+                        <img src="../images/mediodehelado.png" alt="Producto 1">
+                        <h2>Ice Card - 1/2kg de helado</h2>
+                        <p>Precio: $3.800,00</p>
+                    </div>
                 </div>
-
-                <div class="product-details">
-                    <img src="../images/mediodehelado.png" alt="Producto 1">
-                    <h2>Ice Card - 1/2kg de helado</h2>
-                    <p>Precio: $3.800,00</p>
+                
+                <div class="item_cards">
+                    <div class="product-details">
+                        <img src="../images/valeX2k.png" alt="Producto 1">
+                        <h2>Ice Gift - $2.000</h2>
+                        <p>Precio: $2.000,00</p>
+                    </div>
                 </div>
-
-                <div class="product-details">
-                    <img src="../images/valeX2k.png" alt="Producto 1">
-                    <h2>Ice Gift - $2.000</h2>
-                    <p>Precio: $2.000,00</p>
+                
+                <div class="item_cards">
+                    <div class="product-details">
+                        <img src="../images/cuartodehelado.png" alt="Producto 1">
+                        <h2>Ice Card - 1/4 kg de helado</h2>
+                        <p>Precio: $2.200</p>
+                    </div>
                 </div>
-
-                <div class="product-details">
-                    <img src="../images/cuartodehelado.png" alt="Producto 1">
-                    <h2>Ice Card - 1/4 kg de helado</h2>
-                    <p>Precio: $2.200</p>
+                
+                <div class="item_bowls">
+                    <div class="product-details">
+                        <img src="../images/bowlCorazon.png" alt="Producto 1">
+                        <h2>Bowl - Red</h2>
+                        <p>Precio: $1.490.00</p>
+                    </div>
                 </div>
-
-                <div class="product-details">
-                    <img src="../images/bowlCorazon.png" alt="Producto 1">
-                    <h2>Bowl - Red</h2>
-                    <p>Precio: $1.490.00</p>
-                </div>
-                <div class="product-details">
-                    <img src="../images/bowlBlack.png" alt="Producto 1">
-                    <h2>Bowl - Black</h2>
-                    <p>Precio: $1.490.00</p>
-                </div>
+                <div class="item_bowls">
+                    <div class="product-details">
+                        <img src="../images/bowlBlack.png" alt="Producto 1">
+                        <h2>Bowl - Black</h2>
+                        <p>Precio: $1.490.00</p>
+                    </div>
+                </div>                
             </div>
         </div>       
     </section>
@@ -170,6 +203,6 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.720632815344!2d-65.20135617370447!3d-26.81702263921408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c23b7b6e863%3A0x976c9adc5013942c!2sUniversidad%20Tecnol%C3%B3gica%20Nacional%20-%20Facultad%20Regional%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1698522608988!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>
