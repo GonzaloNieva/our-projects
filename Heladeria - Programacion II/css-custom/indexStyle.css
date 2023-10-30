@@ -15,3 +15,14 @@
     width: 100%;
     border: salmon solid;
 }
+
+
+
+
+.carousel-control-prev-icon {
+    filter: invert(1) grayscale(1) brightness(0.5);
+}
+
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(1) brightness(0.5);
+}
