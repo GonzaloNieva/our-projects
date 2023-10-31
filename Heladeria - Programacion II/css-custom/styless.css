@@ -16,6 +16,24 @@ html{
 
 body{   
     background-color: #F5E6DA;
+
+    
+}
+
+
+.probando{
+    width: 100%;
+			height: 100vh;
+			color: #fff;
+			background: linear-gradient(45deg,aqua,blue,white,aqua);
+			background-size: 400% 400%;
+			position: relative;
+			animation: cambiar 10s ease-in-out infinite;
+}
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
 }
 
 /*   Formulario */

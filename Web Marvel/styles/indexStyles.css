@@ -1,56 +1,35 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dropdown {
-    display: inline-block;
+body{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    margin: 0;
+    background-color: linear-gradient(45deg,white,aqua,grey,salmon);
+    background-size: 400% 400%;
     position: relative;
+    animation: cambiar 10s ease-in-out infinite;
 }
-.heladeria{
-    display: flex;
-    justify-content: center;
+@keyframes cambiar{
+    0% {background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
 
-    width: auto;
-    height: 10%;
-    padding: 10px;
-    border: 1px solid #00A4BD;
-    border-radius: 3px;
-}
-.nombreHeladeria{
-    font-size: 400%;
-    font-weight: 700;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
+
+
+/*
+tumama{
     width: 100%;
-    overflow: auto;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(45deg,aqua,blue,white,aqua);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
 }
-.dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
 }
-.dropdown-content a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    width: 96%;
-
-    color: #000000;
-    padding: 5px;
-    text-decoration: none;
-    height: 100px;
-}
-.dropdown-content a:hover {
-    color: #FFFFFF;
-    background-color: #00A4BD;
-    height: 100px;
-}
+*/
