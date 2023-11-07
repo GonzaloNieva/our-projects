@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toñito´s</title>
+    
+
+
+
+    <!-- Bootstrap -->
+
+<link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+
+    <!-- Mis Estilos -->
+<link rel="stylesheet" href="../css-custom/nav.css">
+<link rel="stylesheet" href="../css-custom/contactoStyle.css">
+<link rel="stylesheet" href="../css-custom/footerStyle.css">
+    
+
+    <!-- Fuentes -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="icon" href="images/A-Red-Panda-car-1-PhotoRoom.png-PhotoRoom.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&family=Roboto:wght@300;700&family=Secular+One&display=swap" rel="stylesheet">
+
+
+    <!-- Newsletter -->
+<script src="js/form.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="contenedorNav">
+                <div class="logoNav" style="width: 90px; height: 90px;">
+                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="" style="height: auto; width: 100%;">
+                </div>
+                <div class="secciones">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="sabores.html">SABORES</a></li>
+                        <li><a href="shop.html">TIENDA</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="botones">
+                    <div class="lenguajes">
+                        <img src="" alt="">
+                        <button></button>
+                    </div>
+
+
+                    <div class="carrito">
+                        <a href="">
+                            <img src="../images/carrito-TiendaHeladeria.png" alt="carrito icon" style="width: 45px; height: 45px;">
+                        </a>                                              
+                    </div>                   
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="espaciador"></div>
+    
+    <div class="container container-custom">
+        <form id="Formulario">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+
+
+            <!-- 
+                El atributo pattern permite especificar una expresion regular que debera coincidir con el valor de la entrada para ser valido.
+                La expresion utilizada es casi estandar para validaciones del tipo e-mail. La entrada debe cumplir con el formato: juan@dominio.algo
+            -->
+            <!--                                                                      algo      @ dominio    .    algo   -->
+            <input type="email" class="form-control" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <!--                                                                 EJ:  Juan      @ gmail      .    com    -->
+
+
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono (Ejemplo: +12 9 555 345-6789 )</label>
+            <input type="tel" class="form-control" id="telefono" required pattern="^\+\d{2,3}\s9\s\d{3}\s(\d{3}-\d{4} | \d{7})$">
+        </div>
+        <button type="submit" class="btn btn-custom">Enviar</button>
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('Formulario').addEventListener('submit', function(e) {
+        // Evita que el fomulario se envie inmediatamente
+        e.preventDefault();
+
+        // Verificacion de los campos
+        if (!e.target.checkValidity()) {
+
+            // Si se encontro algun problema en los campos, entonces evitamos que se envie el formulario
+            e.stopPropagation();
+        } else {
+            // Aquí puedes agregar la lógica para manejar el envío del formulario
+            console.log('Formulario enviado');
+        }
+        // agrega la clase "was-validated" para que Bootstrap muestre sus mensajes personalizados de validazion
+        e.target.classList.add('was-validated');
+        }, false);
+    </script>
+    
+
+
+<!--
+
+    
+    <div class="container container-custom">
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono">
+            </div>
+            <button type="submit" class="btn btn-custom">Enviar</button>
+        </form>
+    </div>
+    
+</form>
+</div>
+-->
+
+    </section>
+
+
+    <div class="espaciador"></div>
+    <footer class="footer">
+        <div class="logo">
+            <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="Toñito bb">
+        </div>
+        <div class="contenedor">
+            
+            <div class="fila">
+                <div class="footer-col">
+                    <h4 class="titulo">Compañia</h4>
+                    <ul>
+                        <li><a href="#" class="cuerpo">Cotactanos</a></li>
+                        <li><a href="#" class="cuerpo">Mas Servicio</a></li>
+                        <li><a href="#" class="cuerpo">Politica De<br> Privacidad</a></li>
+                        <li><a href="#" class="cuerpo">Socios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="titulo">Ayuda</h4>
+                    <ul>
+                        <li><a href="#" class="cuerpo">Codigos</a></li>
+                        <li><a href="#" class="cuerpo">shipping</a></li>
+                        <li><a href="#" class="cuerpo">Devoluciones</a></li>
+                        <li><a href="#" class="cuerpo">Por Mayor</a></li>
+                        <li><a href="#" class="cuerpo">Opciones <br>De Compra</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="titulo">Tienda Online</h4>
+                    <ul>
+                        <li><a href="#" class="cuerpo">ver mas</a></li>
+                        <li><a href="#" class="cuerpo">Promociones</a></li>
+                        <li><a href="#" class="cuerpo">Descuentos</a></li>
+                        <li><a href="#" class="cuerpo">Cupones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="titulo">Seguinos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.720632815344!2d-65.20135617370447!3d-26.81702263921408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c23b7b6e863%3A0x976c9adc5013942c!2sUniversidad%20Tecnol%C3%B3gica%20Nacional%20-%20Facultad%20Regional%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1698522608988!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap -->
+<script src="../Bootstrap/js/bootstrap.min.js"></script>
+</body>

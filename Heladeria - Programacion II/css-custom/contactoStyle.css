@@ -1,0 +1,15 @@
+.btn-custom {
+    background-color: #BD3F16;
+    color: white;
+    font-weight: bolder;
+}
+.btn-custom:hover {
+    border: 1px solid #BD3F16;
+    color: #BD3F16;
+    font-weight: bolder;
+}
+.container-custom{
+    padding: 20px 20px 50px 20px;
+    border: 1px #BD3F16 solid;
+    border-radius: .25rem;
+}
