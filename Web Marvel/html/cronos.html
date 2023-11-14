@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/cronosStyles.css">
+
+    <script>
+        function calcularPerimetro() {
+            let lados = document.getElementById('lados').value;
+            let longitud = document.getElementById('longitud').value;
+            let perimetro = lados * longitud;
+
+            switch(lados){
+                case '3':
+                    document.getElementById('resFigura').innerHTML = "La figura es un triangulo.";
+                    document.getElementById('resultado').innerHTML = "El perímetro es: " + perimetro;
+                    break;
+                case '4':
+                    document.getElementById('resFigura').innerHTML = "La figura es un rectangulo.";
+                    document.getElementById('resultado').innerHTML = "El perímetro es: " + perimetro;
+                    break;
+                case '5':
+                    document.getElementById('resFigura').innerHTML = "La figura es un pentagono.";
+                    document.getElementById('resultado').innerHTML = "El perímetro es: " + perimetro;
+                    break;
+                case '6':
+                    document.getElementById('resFigura').innerHTML = "La figura es un hexagono.";
+                    document.getElementById('resultado').innerHTML = "El perímetro es: " + perimetro;
+                    break;
+                default: document.getElementById('resultado').innerHTML = "Usted ingreso una cantidad de lados menor a 3 o mayor a 6.";
+
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+    <h1>Calculadora de perímetro de figuras regulares</h1>
+    <p>Ingrese la cantidad de lados:</p>
+    <input type="number" id="lados" name="lados">
+    <p>Ingrese la longitud de los lados:</p>
+    <input type="number" id="longitud" name="longitud">
+    <button onclick="calcularPerimetro()">Calcular perímetro</button>
+    <p id="resFigura"></p>
+    <p id="resultado"></p>
+
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de perímetro</title>
+    
+    
 </head>
 <body>
     
 </body>
 </html>
+
+
+-->
