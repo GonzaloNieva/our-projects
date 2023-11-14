@@ -19,9 +19,28 @@
     width: 100%;
 }
 
+.carousel-inner {
+    position: relative;
+}
 
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/08/17/cuando-caduca-un-helado-las-claves-para-saber-si-esta-estropeado.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3; /* Ajusta la opacidad según sea necesario */
+}
 
-
+.carousel-item {
+    color: #080808; /* Ajusta el color del texto para que sea legible sobre la imagen */
+    text-shadow: 2px 2px 4px rgba(233, 142, 39, 0.5); /* Añade un sombreado al texto para mejor legibilidad */
+    z-index: 1; /* Asegura que el contenido del carrusel esté por encima de la imagen de fondo */
+}
 .carousel-control-prev-icon {
     filter: invert(1) grayscale(1) brightness(0.5);
 }

@@ -1,15 +1,61 @@
-.btn-custom {
-    background-color: #BD3F16;
-    color: white;
-    font-weight: bolder;
+body {
+    background: linear-gradient(45deg, rgb(240, 130, 57), rgb(247, 206, 221), rgb(242, 150, 67, 59%), #150a10) ;
+    background-size: 400% 400% ;
+    position: relative ;
+    animation: cambiar 10s ease-in-out infinite ;
+    color: #fff;
 }
-.btn-custom:hover {
-    border: 1px solid #BD3F16;
-    color: #BD3F16;
-    font-weight: bolder;
+
+@keyframes cambiar {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
 }
-.container-custom{
-    padding: 20px 20px 50px 20px;
-    border: 1px #BD3F16 solid;
-    border-radius: .25rem;
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+}
+
+.form-container form {
+    background-color: rgba(243, 158, 31, 0.432);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: rgba(243, 158, 31, 0.432);
+    padding: 74px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+}
+
+.image-box:hover {
+    transform: rotateY(180deg);
 }

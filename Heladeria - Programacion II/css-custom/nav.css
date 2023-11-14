@@ -1,5 +1,11 @@
 .espaciador{
-    height: 150px;
+   height: 150px;
+   
+        background-size: 400% 400% ;
+        position: relative ;
+        animation: cambiar 10s ease-in-out infinite ;
+      
+        color: #fff;
 }
 
 .contenedorNav{
