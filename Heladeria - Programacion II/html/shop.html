@@ -15,6 +15,8 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="product-listing.css" />
     <!-- Swiper -->
     <link
         rel="stylesheet"
@@ -28,7 +30,7 @@
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="Tu Logo" style="max-height: 40px;">
+                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="Tu Logo" style="max-height: 80px;">
                 </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,11 +49,11 @@
                       <a class="nav-link active" aria-current="page" href="./index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./sabores.html">Sabores</a>
+                      <a class="nav-link" href="./sabores.html">SABORES</a>
                     </li>
                     <li class="nav-item ">
                       <a class="nav-link " href="./contacto.html">
-                        Contacto
+                        CONTACTO
                       </a>
                       
                     </li>
@@ -68,116 +70,81 @@
     <section class="sec_tienda">
         <div class="espaciador"></div>
 
+        <section class="cartitas">
+            <ul class="l-items">
+                <li class="item">
+                    <button class="item-add">Comprar</button>
+                    <img src="../images/bowlcorazon.png" alt="">
+                    <p class="item-description">Indispensable.</p>
+                    <h4 class="item-name">Plato Amor</h4>
+                    <h5 class="item-price">$<span class="price">1500.00</span></h5>
+                </li>
 
-        <div class="comovosquieras">
-        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
-        centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
-        <swiper-slide><img src="../images/1.png" alt=""></swiper-slide>
-        <swiper-slide><img src="../images/promo.jpg_large" alt=""></swiper-slide>
-        <swiper-slide><img src="../images/slider.avif" alt=""></swiper-slide>
-        </swiper-container>
-        </div>
+                <li class="item">
+                    <button class="item-add">Comprar</button>
+                    <img src="../images/delantalhappy.png" alt="">
+                    <p class="item-description">Indispensable.</p>
+                    <h4 class="item-name">Delantal IceFunny</h4>
+                    <h5 class="item-price">$<span class="price">1300.00</span></h5>
+                </li>
 
-        <section>
-            <div>
-                <h2>Shop With Ease</h2>
-                
-                <button id='cart-button' class="trigger cart-button-style">Show Cart</button>
-                
-                
-                <div id="shop">
-                    
-                    <div class="products ios apple" id="iphone-x">
-                        <img class="product-image" src="../images/bowlblack.png">
-                        <p class="product-name">iPhone X</p>
-                        <p class="product-description">A 5.5" beast of processing power from Apple.</p>
-                        <p class="product-price" value='999'>999</p>
-                        <button class="add-to-cart" id='test'>ADD TO CART</button>
-                    </div>
-                    
-                    <div class="products android samsung" id="samsung-s9">
-                        <img class="product-image" src="../images/cuartodehelado.png">
-                        <p class="product-name">Samsung S9</p>
-                        <p class="product-description">The most powerful Android device on the planet.</p>
-                        <p class="product-price" value='789'>789</p>
-                        <button class="add-to-cart">ADD TO CART</button>
-                    </div>
-                    
-                    
-                    
-                    <div class="products android oneplus" id="oneplus-6">
-                        <img class="product-image" src="../images/valeX2k.png">
-                        <p class="product-name">Oneplus 6</p>
-                        <p class="product-description">The latest from a long line of affordable premium devices by Oneplus</p>
-                        <p class="product-price" value='799'>799</p>
-                        <button class="add-to-cart">ADD TO CART</button>
-                    </div>
-                    
-                    <div class="products ios apple" id="iphone-8">
-                        <img class="product-image" src="../images/delantalfanatic.png">
-                        <p class="product-name">iPhone 8</p>
-                        <p class="product-description">The little, less-stylish brother of the iPhone X.</p>
-                        <p class="product-price" value='719'>719</p>
-                        <button class="add-to-cart">ADD TO CART</button>
-                    </div>
-                    
-                   
-                    
-                    
-                    
+                <li class="item">
+                    <button class="item-add">Comprar</button>
+                    <img src="../images/delantalfanatic.png" alt="">
+                    <p class="item-description">Indispensable.</p>
+                    <h4 class="item-name">Delantal Fanatic</h4>
+                    <h5 class="item-price">$<span class="price">1300.00</span></h5>
+                </li>
+
+                <li class="item">
+                    <button class="item-add">Comprar</button>
+                    <img src="../images/kilodehelado.png" alt="">
+                    <p class="item-description">Indispensable.</p>
+                    <h4 class="item-name">Gift Card 1Kg Helado</h4>
+                    <h5 class="item-price">$<span class="price">2500.00</span></h5>
+                </li>
+
+                <li class="item">
+                    <button class="item-add">Comprar</button>
+                    <img src="../images/bowlblack.png" alt="">
+                    <p class="item-description">Indispensable.</p>
+                    <h4 class="item-name">Plato Black</h4>
+                    <h5 class="item-price">$<span class="price">1300.00</span></h5>
+                </li>
+               
+                <li class="item">
+                    <button class="item-add">Comprar</button>
+                    <img src="../images/cuartodehelado.png" alt="">
+                    <p class="item-description">Indispensable.</p>
+                    <h4 class="item-name">Gift Card 1/4Kg Helado</h4>
+                    <h5 class="item-price">$<span class="price">1000.00</span></h5>
+                </li>
+
+                <li class="item">
+                    <button class="item-add">Comprar</button>
+                    <img src="../images/mediodehelado.png" alt="">
+                    <p class="item-description">Indispensable.</p>
+                    <h4 class="item-name">Gift Card 1/2Kg Helado</h4>
+                    <h5 class="item-price">$<span class="price">1500.00</span></h5>
+                </li>
+            </ul>
+            <button class="hide" id="display-cart">Mostrar Carrito</button>
+    
+            <div class="shop-cart hide">
+                <h3 class="cart-total">Subtotal</h3>
+                <h5 class="cart-total-num">$<span class="price">45.00</span></h5>
+                <ul class="shop-cart-list">
+                </ul>
+                <div class="cart-promo">
+                    <a href="" class="cart-item-promo">Ingrese un codigo de promocion</a>
+                    <input type="text" class="cart-item-promocode" placeholder="">
+                    <div class="cart-item-price">$<span class="price">0.00</span></div>
                 </div>
-                
+                <button id="keep-shopping">Minimizar</button>
+                <button id="checkout">Comprar</button>
             </div>
-                <div id='cart-wrapper' class="slider close">
-                    <div id='cart'>
-                        <div id="cart-products-wrapper">
-                            <table id="cart-table">
-                            <thead id="cart-table-header">
-                                 <th class="name-col">Product Name</th> 
-                                 <th class="quantity-col">Quantity</th>       
-                                 <th class="price-col">Price</th>
-                                 <th class="updated-price-col">Updated Price</th>
-                                 <th class="update-col">Update</th>
-                                 <th class="remove-col">Remove</th>
-                            </thead>
-                            <tbody id="cart-table-body"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <div id='amount-controls'>
-                        <div id="cart-amount-wrapper">
-                            <table>
-                                <tbody>
-                                    <tr id='subtotal-wrappper'>
-                                        <td id="subtotal-label">Subtotal:</td>
-                                        <td id="subtotal">0.00</td>
-                                    </tr>
-        
-                                    <tr id='total-wrapper'>
-                                        <td id="total-label">Total:</td>
-                                        <td id="total">0.00</td>
-                                    </tr>
-        
-                                    <tr id="promo-checkout">
-                                        <td id="promo-wrapper">
-                                            <input id="promo" placeholder="Input Promo Code">
-                                            <button id="apply-promo">Apply Promo</button>
-                                        </td>
-        
-                                        <td>
-                                            <button id="checkout">Checkout</button>
-                                        </td>
-                                        
-                                        <td>
-                                            <button id="ks" class="keep-shopping">Keep Shopping</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+            
+            
             
         </section>
 
