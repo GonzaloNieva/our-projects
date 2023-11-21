@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="../css-custom/nav.css">
 <link rel="stylesheet" href="../css-custom/indexStyle.css">
 <link rel="stylesheet" href="../css-custom/footerStyle.css">
+<link rel="stylesheet" href="../css-custom/navHamb.css">
     
 
     <!-- Fuentes -->
@@ -27,40 +28,51 @@
 
 
     <!-- Newsletter -->
-<script src="js/form.js"></script>
 
+<script src="../js-custom/nav.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="contenedorNav">
-                <div class="logoNav" style="width: 90px; height: 90px;">
-                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="" style="height: auto; width: 100%;">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="Tu Logo" style="max-height: 80px;">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Bienvenidos</h5>
+                  <a class="navbar-brand" href="#">
+                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="Tu Logo" style="max-height: 80px;">
+                </a>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="secciones">
-                    <ul>
-                        <li><a href="sabores.html">SABORES</a></li>
-                        <li><a href="shop.html">TIENDA</a></li>
-                        <li><a href="contacto.html">CONTACTO</a></li>
-                    </ul>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./shop.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./sabores.html">Sabores</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link " href="./contacto.html">
+                        Contacto
+                      </a>
+                      
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Buscar</button>
+                  </form>
                 </div>
-
-
-                <div class="botones">
-                    <div class="lenguajes">
-                        <img src="" alt="">
-                        <button></button>
-                    </div>
-
-
-                    <div class="carrito">
-                        <a href="">
-                            <img src="../images/carrito-TiendaHeladeria.png" alt="carrito icon" style="width: 45px; height: 45px;">
-                        </a>                                              
-                    </div>                   
-                </div>
+              </div>
             </div>
-        </nav>
+          </nav>
+        
     </header>
     <div class="espaciador"></div>
     <section class="carrusel">
@@ -128,7 +140,7 @@ En Toñito's, nuestra misión es crear momentos dulces y memorables para nuestro
 
     <section class="video">
         <div>
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vq-b5EfMDjk?si=Nj_CFEUI0-B-vG1K&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
+            <iframe width="100%" height="100%" src="../video/1119.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      </div>
     </section>
 
 

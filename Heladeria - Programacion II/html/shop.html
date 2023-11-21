@@ -21,41 +21,49 @@
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
 </head>
 <body>
     <header>
-        <nav>
-            <div class="contenedorNav">
-                <div class="logoNav" style="width: 90px; height: 90px;">
-                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="" style="height: auto; width: 100%;">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="Tu Logo" style="max-height: 40px;">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Bienvenidos</h5>
+                  <a class="navbar-brand" href="#">
+                    <img src="../images/A Red Panda car 1-PhotoRoom.png-PhotoRoom.png" alt="Tu Logo" style="max-height: 80px;">
+                </a>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="secciones">
-                    <ul>
-                        <li><a href="index.html">INICIO</a></li>
-                        <li><a href="sabores.html">SABORES</a></li>
-                        <li><a href="contacto.html">CONTACTO</a></li>
-                    </ul>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./sabores.html">Sabores</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link " href="./contacto.html">
+                        Contacto
+                      </a>
+                      
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Buscar</button>
+                  </form>
                 </div>
-
-
-                <div class="botones">
-                    <div class="lenguajes">
-                        <img src="" alt="">
-                        <button></button>
-                    </div>
-
-
-
-                    <div class="carrito">
-                        <a href="">
-                            <img src="../images/carrito-TiendaHeladeria.png" alt="carrito icon" style="width: 45px; height: 45px;">
-                        </a>
-                        
-                        
-                    </div>
-                </div>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>  
     <section class="sec_tienda">
         <div class="espaciador"></div>
@@ -65,88 +73,114 @@
         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
         centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
         <swiper-slide><img src="../images/1.png" alt=""></swiper-slide>
-        <swiper-slide><img src="../images/2.png" alt=""></swiper-slide>
-        <swiper-slide><img src="../images/3.png" alt=""></swiper-slide>
+        <swiper-slide><img src="../images/promo.jpg_large" alt=""></swiper-slide>
+        <swiper-slide><img src="../images/slider.avif" alt=""></swiper-slide>
         </swiper-container>
         </div>
-            <div class="contenedor" id="tienda">
-                <div class="sidebar">
-                    <div class="sidebar_h3">
-                    <h3>Categorías</h3>           
-                </div>
-                    <ul>
-                        <li><a href="#" id="delantales">Delantales</a></li>
-                        <li><a href="#" id="cards">Gift Cards</a></li>
-                        <li><a href="#" id="bowls">Bowls</a></li>
-                    </ul>
-                </div>
-                <div class="contenedor_items">
-                    <div class="item_delantales">
-                        <div class="product-details">
-                            <img src="../images/delantalHappy.png" alt="Producto 1">
-                            <h2>Delantal - Happy Cream</h2>
-                            <p>Precio: $7.300,00</p>
-                        </div>
-                    </div>
-                    
-                    <div class="item_cards">
-                        <div class="product-details">
-                            <img src="../images/kilodehelado.png" alt="Producto 1">
-                            <h2>Ice Card - 1kg de helado</h2>
-                            <p>Precio: $5.900</p>
-                        </div>
-                    </div>
-                    
 
-                    <div class="item_delantales">
-                        <div class="product-details">
-                            <img src="../images/delantalFanatic.png" alt="Producto 1">
-                            <h2>Delantal de Cocina - Fanatic</h2>
-                            <p>Precio: $7.400,01</p>
-                        </div>
+        <section>
+            <div>
+                <h2>Shop With Ease</h2>
+                
+                <button id='cart-button' class="trigger cart-button-style">Show Cart</button>
+                
+                
+                <div id="shop">
+                    
+                    <div class="products ios apple" id="iphone-x">
+                        <img class="product-image" src="../images/bowlblack.png">
+                        <p class="product-name">iPhone X</p>
+                        <p class="product-description">A 5.5" beast of processing power from Apple.</p>
+                        <p class="product-price" value='999'>999</p>
+                        <button class="add-to-cart" id='test'>ADD TO CART</button>
                     </div>
                     
-                    <div class="item_cards">
-                        <div class="product-details">
-                            <img src="../images/mediodehelado.png" alt="Producto 1">
-                            <h2>Ice Card - 1/2kg de helado</h2>
-                            <p>Precio: $3.800,00</p>
-                        </div>
+                    <div class="products android samsung" id="samsung-s9">
+                        <img class="product-image" src="../images/cuartodehelado.png">
+                        <p class="product-name">Samsung S9</p>
+                        <p class="product-description">The most powerful Android device on the planet.</p>
+                        <p class="product-price" value='789'>789</p>
+                        <button class="add-to-cart">ADD TO CART</button>
                     </div>
                     
-                    <div class="item_cards">
-                        <div class="product-details">
-                            <img src="../images/valeX2k.png" alt="Producto 1">
-                            <h2>Ice Gift - $2.000</h2>
-                            <p>Precio: $2.000,00</p>
-                        </div>
+                    
+                    
+                    <div class="products android oneplus" id="oneplus-6">
+                        <img class="product-image" src="../images/valeX2k.png">
+                        <p class="product-name">Oneplus 6</p>
+                        <p class="product-description">The latest from a long line of affordable premium devices by Oneplus</p>
+                        <p class="product-price" value='799'>799</p>
+                        <button class="add-to-cart">ADD TO CART</button>
                     </div>
                     
-                    <div class="item_cards">
-                        <div class="product-details">
-                            <img src="../images/cuartodehelado.png" alt="Producto 1">
-                            <h2>Ice Card - 1/4 kg de helado</h2>
-                            <p>Precio: $2.200</p>
-                        </div>
+                    <div class="products ios apple" id="iphone-8">
+                        <img class="product-image" src="../images/delantalfanatic.png">
+                        <p class="product-name">iPhone 8</p>
+                        <p class="product-description">The little, less-stylish brother of the iPhone X.</p>
+                        <p class="product-price" value='719'>719</p>
+                        <button class="add-to-cart">ADD TO CART</button>
                     </div>
                     
-                    <div class="item_bowls">
-                        <div class="product-details">
-                            <img src="../images/bowlCorazon.png" alt="Producto 1">
-                            <h2>Bowl - Red</h2>
-                            <p>Precio: $1.490.00</p>
-                        </div>
-                    </div>
-                    <div class="item_bowls">
-                        <div class="product-details">
-                            <img src="../images/bowlBlack.png" alt="Producto 1">
-                            <h2>Bowl - Black</h2>
-                            <p>Precio: $1.490.00</p>
-                        </div>
-                    </div>                
+                   
+                    
+                    
+                    
                 </div>
-            </div>       
-    </section>
+                
+            </div>
+                <div id='cart-wrapper' class="slider close">
+                    <div id='cart'>
+                        <div id="cart-products-wrapper">
+                            <table id="cart-table">
+                            <thead id="cart-table-header">
+                                 <th class="name-col">Product Name</th> 
+                                 <th class="quantity-col">Quantity</th>       
+                                 <th class="price-col">Price</th>
+                                 <th class="updated-price-col">Updated Price</th>
+                                 <th class="update-col">Update</th>
+                                 <th class="remove-col">Remove</th>
+                            </thead>
+                            <tbody id="cart-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div id='amount-controls'>
+                        <div id="cart-amount-wrapper">
+                            <table>
+                                <tbody>
+                                    <tr id='subtotal-wrappper'>
+                                        <td id="subtotal-label">Subtotal:</td>
+                                        <td id="subtotal">0.00</td>
+                                    </tr>
+        
+                                    <tr id='total-wrapper'>
+                                        <td id="total-label">Total:</td>
+                                        <td id="total">0.00</td>
+                                    </tr>
+        
+                                    <tr id="promo-checkout">
+                                        <td id="promo-wrapper">
+                                            <input id="promo" placeholder="Input Promo Code">
+                                            <button id="apply-promo">Apply Promo</button>
+                                        </td>
+        
+                                        <td>
+                                            <button id="checkout">Checkout</button>
+                                        </td>
+                                        
+                                        <td>
+                                            <button id="ks" class="keep-shopping">Keep Shopping</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            
+        </section>
+
 
     <div class="espaciador"></div>
     <footer class="footer">
@@ -201,5 +235,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js-custom/shop.js"></script>
+    
+    
 </body>
 </html>
