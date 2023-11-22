@@ -1,31 +1,5 @@
 (function(window){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
 	var addButtons = document.querySelectorAll('.item-add');
 	var shopCart = document.querySelector('.shop-cart');
 
@@ -134,30 +108,5 @@
 	function displayPriceTotal(price){
 		document.querySelector('.cart-total-num .price').innerHTML = price.toFixed(2);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })(window);
