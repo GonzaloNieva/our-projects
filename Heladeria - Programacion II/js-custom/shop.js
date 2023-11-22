@@ -21,78 +21,49 @@
 
 			}this.cartList[id]
 			this.priceTotal = sum;
-		},
-		applyPromo: function(code){
-			var promoPrice = 0;
-			// check for promocode
-			if(code == "singles"){
-				let item = 0;
-				for (i in this.cartList){
-					if(this.cartList[i].price > item)
-						item = this.cartList[i].price;
-				}
-				promoPrice = item/2;
-			}
-			else if(code == "sale"){
-				promoPrice = (this.priceTotal - this.priceTotal * .9).toFixed(2);
-			}
-			//Check if applied promo is bettern than current.
-			if(promoPrice > this.promoSavings){
-				this.priceTotal = this.priceTotal + this.promoSavings - promoPrice;
-				this.promoSavings = +promoPrice;
-			}
 		}
 	}
 
-	// Hide cart and keep shopping
+	// Esconder el carrito, minimizar
 	document.getElementById('keep-shopping').addEventListener('click', function(){
 		shopCart.classList.add('hide');
 		document.getElementById('display-cart').classList.remove('hide');
 	});
 
-	// display cart, if items exist
+	// Mostrar el carrito, si hay items
 	document.getElementById('display-cart').addEventListener('click', function(){
 		shopCart.classList.remove('hide');
 		this.classList.add('hide');
 	});
 
-	// Promo Code application	
-	document.querySelector('.cart-item-promocode').addEventListener('blur', function(){
-		console.log('promo blue')
-		cartPricing.applyPromo(this.value);
-		if(cartPricing.promoSavings > 0){
-			this.parentNode.querySelector('.cart-item-price .price').innerHTML = cartPricing.promoSavings.toFixed(2);
-			displayPriceTotal(cartPricing.priceTotal);
-		}
-	})
-
-	// Add Item to Cart Functionality
+	// Agregar producto al carrito
 	for(var i = 0; i < addButtons.length; i++){
 		addButtons[i].addEventListener('click', function(){
-			//Grab item details
+			//Adquirimos los detalles del producto
 			var itemName = this.parentNode.querySelector('.item-name').innerHTML;
 			var itemPrice = this.parentNode.querySelector('.item-price .price').innerHTML;
 			var itemImage = this.parentNode.querySelector('img').getAttribute('src');
 			
-			//build and append new item to cart
+			//Armar y agregar un nuevo item al carrito
 			shopCart.querySelector('.shop-cart-list').appendChild(buildCartItem(itemName, itemPrice, itemImage));
-			//display cart if hidden
+			//Mostrar el carrito, si estaba escondido
 			shopCart.classList.remove('hide');
-			// update pricing
+			// Actualizacion de precio
 			displayPriceTotal(cartPricing.priceTotal);
 		})
 	}
 
+	//Armado del producto en el  carrito
 	function buildCartItem(name, price, image){
-		// build element
+		// armar elemento
 		var cartItem = document.createElement('li');
 		cartItem.className = 'cart-item';
 
-		// add cart item to price list and set id
+		// Agregamos el item del carrito a la lista de precios y le damos un id
 		cartPricing.addItem(Object.keys(cartPricing.cartList).length + 1, price, 1);
 		cartItem.setAttribute('data-id', Object.keys(cartPricing.cartList).length);
 
-		// Fill out cart item element
+		// Llenamos los elementos del item del carrito
 		var cartImage = "<img src='"+image+"' alt=''>";
 		var cartName = "<a href='' class='cart-item-name'>" + name + "</a>";
 		var cartPrice = "<div class='cart-item-price'>$<span class='price'>"+ price +"</span></div>";
@@ -100,21 +71,21 @@
 													"<input type='text' class='cart-item-quantity' placeholder='1' value='1'>"+
 													cartPrice+"<button class='cart-item-remove'>X</button>";
 
-		//apply remove event
+		//Aplicacion del evento para quitar elementos
 		cartItem.querySelector('.cart-item-remove').addEventListener('click', function(){
 			removeCartItem(this.parentNode);
 		});
 
-		// Update cart on change of quantity;
+		// Actualizacion del carro (precio) cuando cambia la cantidad
 		cartItem.querySelector('.cart-item-quantity').addEventListener('blur', function(){
-			// remove item if quantity is 0
+			// Si la cantidad del producto en el carrito es 0, se quita
 			if(this.value == 0)
 				removeCartItem(this.parentNode);
 			else if(this.value){
-				// Update Pricing on quantity change
+				// Actualiza el precio cuando cambia
 				let itemPrice = cartPricing.cartList[this.parentNode.getAttribute('data-id')].price;
 				cartPricing.addItem(this.parentNode.getAttribute('data-id'), itemPrice, +this.value);
-				// Display new pricing
+				// Muestra el nuevo precio
 				this.parentNode.querySelector('.cart-item-price .price').innerHTML = (itemPrice * +this.value).toFixed(2);
 				displayPriceTotal(cartPricing.priceTotal);
 			}
@@ -123,12 +94,12 @@
 	}
 
 	function removeCartItem(node){
-		// update object
+		// Actualizacion del objeto
 		cartPricing.removeItem(node.getAttribute('data-id'));
-		// remove element
+		// Quitar elemento
 		node.remove();
 		displayPriceTotal(cartPricing.priceTotal);
-		// if no items in cart, hide cart
+		// Si no hay elementos en el carrito, se esconde
 		if(Object.keys(cartPricing.cartList).length == 0)
 			shopCart.classList.add('hide');
 	}
